@@ -1,10 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus\HtmlCompress\Compressor;
+namespace WyriHaximus\JsCompress\Compressor;
 
+use WyriHaximus\Compress\CompressorInterface;
 use YUI\Compressor as YUICompressor;
 
-final class YUIJSCompressor extends Compressor
+final class YUIJSCompressor implements CompressorInterface
 {
     /** @var YUICompressor */
     private $yui;
@@ -14,7 +15,7 @@ final class YUIJSCompressor extends Compressor
         $this->yui = new YUICompressor();
     }
 
-    protected function execute(string $string): string
+    public function compress(string $string): string
     {
         try {
             return $this->yui->compress($string);

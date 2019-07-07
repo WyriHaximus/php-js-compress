@@ -1,10 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus\HtmlCompress\Compressor;
+namespace WyriHaximus\JsCompress\Compressor;
 
-final class JSMinCompressor extends Compressor
+use WyriHaximus\Compress\CompressorInterface;
+
+final class JSMinCompressor implements CompressorInterface
 {
-    protected function execute(string $string): string
+    public function compress(string $string): string
     {
         try {
             return (string)\JSMin::minify($string);

@@ -1,6 +1,6 @@
 {
-    "name": "wyrihaximus/html-compress",
-    "description": "Compress/minify your HTML",
+    "name": "wyrihaximus/js-compress",
+    "description": "Compress/minify your JavaScript",
     "keywords": [
         "html",
         "compress"
@@ -19,11 +19,9 @@
         "linkorb/jsmin-php": "1.0.0",
         "matthiasmullie/minify": "^1.3",
         "meenie/javascript-packer": "1.1",
-        "natxet/cssmin": "^3.0.5",
         "patchwork/jsqueeze": "~2.0",
         "tedivm/jshrink": "^1.3",
-        "voku/html-min": "^3.1.8",
-        "websharks/css-minifier": "150820"
+        "wyrihaximus/compress": "^1.1"
     },
     "require-dev": {
         "wyrihaximus/test-utilities": "^1.2"
@@ -36,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "WyriHaximus\\HtmlCompress\\": "src/"
+            "WyriHaximus\\JsCompress\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WyriHaximus\\HtmlCompress\\Tests\\": "tests/"
+            "WyriHaximus\\JsCompress\\Tests\\": "tests/"
         }
     },
     "scripts": {

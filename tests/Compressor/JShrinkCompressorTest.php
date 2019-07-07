@@ -1,26 +1,25 @@
 <?php declare(strict_types=1);
-/**
- * Created by PhpStorm.
- * User: wyrihaximus
- * Date: 6/25/14
- * Time: 5:32 PM.
- */
 
-namespace WyriHaximus\HtmlCompress\Tests\Compressor;
+namespace WyriHaximus\JsCompress\Tests\Compressor;
 
-use WyriHaximus\HtmlCompress\Compressor\JShrinkCompressor;
+use WyriHaximus\Compress\AbstractCompressorTest;
+use WyriHaximus\Compress\CompressorInterface;
+use WyriHaximus\JsCompress\Compressor\JShrinkCompressor;
 
 /**
  * @internal
  */
-final class JShrinkCompressorTest extends AbstractVendorCompressorTest
+final class JShrinkCompressorTest extends AbstractCompressorTest
 {
-    const COMPRESSOR = JShrinkCompressor::class;
-
     public function testException(): void
     {
         $input = "var a = '";
         $output = $this->compressor->compress($input);
         self::assertSame($input, $output);
+    }
+
+    protected function getCompressor(): CompressorInterface
+    {
+        return new JShrinkCompressor();
     }
 }

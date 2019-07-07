@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-use WyriHaximus\HtmlCompress\Factory;
+use WyriHaximus\JsCompress\Factory;
 
 require \dirname(__DIR__) . '/vendor/autoload.php';
 

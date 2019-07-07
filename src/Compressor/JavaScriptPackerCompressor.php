@@ -1,10 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus\HtmlCompress\Compressor;
+namespace WyriHaximus\JsCompress\Compressor;
 
-final class JavaScriptPackerCompressor extends Compressor
+use WyriHaximus\Compress\CompressorInterface;
+
+final class JavaScriptPackerCompressor implements CompressorInterface
 {
-    protected function execute(string $string): string
+    public function compress(string $string): string
     {
         return (string)(new \JavaScriptPacker($string))->pack();
     }

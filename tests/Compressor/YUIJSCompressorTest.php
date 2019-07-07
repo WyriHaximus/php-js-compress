@@ -1,19 +1,18 @@
 <?php declare(strict_types=1);
-/**
- * Created by PhpStorm.
- * User: wyrihaximus
- * Date: 6/25/14
- * Time: 5:32 PM.
- */
 
-namespace WyriHaximus\HtmlCompress\Tests\Compressor;
+namespace WyriHaximus\JsCompress\Tests\Compressor;
 
-use WyriHaximus\HtmlCompress\Compressor\YUIJSCompressor;
+use WyriHaximus\Compress\AbstractCompressorTest;
+use WyriHaximus\Compress\CompressorInterface;
+use WyriHaximus\JsCompress\Compressor\YUIJSCompressor;
 
 /**
  * @internal
  */
-final class YUIJSCompressorTest extends AbstractVendorCompressorTest
+final class YUIJSCompressorTest extends AbstractCompressorTest
 {
-    const COMPRESSOR = YUIJSCompressor::class;
+    protected function getCompressor(): CompressorInterface
+    {
+        return new YUIJSCompressor();
+    }
 }

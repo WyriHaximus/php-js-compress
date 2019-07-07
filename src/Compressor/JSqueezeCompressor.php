@@ -1,12 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus\HtmlCompress\Compressor;
+namespace WyriHaximus\JsCompress\Compressor;
 
 use Patchwork\JSqueeze;
+use WyriHaximus\Compress\CompressorInterface;
 
-final class JSqueezeCompressor extends Compressor
+final class JSqueezeCompressor implements CompressorInterface
 {
-    protected function execute(string $string): string
+    public function compress(string $string): string
     {
         return (string)(new JSqueeze())->squeeze($string);
     }
