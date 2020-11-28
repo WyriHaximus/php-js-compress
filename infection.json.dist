@@ -10,20 +10,7 @@
     },
      "mutators": {
          "@default": true,
-         "ArrayItemRemoval": {
-             "ignore": [
-                 "WyriHaximus\\JsCompress\\Factory::construct",
-                 "WyriHaximus\\JsCompress\\Factory::constructSmallest"
-             ]
-         },
-         "CastString": {
-             "ignore": [
-                 "WyriHaximus\\JsCompress\\Compressor\\JSqueezeCompressor::compress",
-                 "WyriHaximus\\JsCompress\\Compressor\\JSMinCompressor::compress",
-                 "WyriHaximus\\JsCompress\\Compressor\\JavaScriptPackerCompressor::compress"
-             ]
-         },
-         "TrueValue": {
+         "Ternary": {
              "ignore": [
                  "WyriHaximus\\JsCompress\\Factory::constructSmallest"
              ]

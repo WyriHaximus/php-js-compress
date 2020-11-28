@@ -1,20 +1,27 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\JsCompress\Compressor;
 
 use JShrink\Minifier;
+use Throwable;
 use WyriHaximus\Compress\CompressorInterface;
+
+use function is_bool;
 
 final class JShrinkCompressor implements CompressorInterface
 {
     public function compress(string $string): string
     {
         try {
-            /** @var string $string */
-            $string = Minifier::minify($string);
+            $result = Minifier::minify($string);
+            if (is_bool($result)) {
+                return $string;
+            }
 
-            return $string;
-        } catch (\Exception $exception) {
+            return $result;
+        } catch (Throwable $exception) { /** @phpstan-ignore-line */
             return $string;
         }
     }
