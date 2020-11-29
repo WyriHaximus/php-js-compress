@@ -1,14 +1,16 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\JsCompress\Compressor;
 
+use Throwable;
 use WyriHaximus\Compress\CompressorInterface;
 use YUI\Compressor as YUICompressor;
 
 final class YUIJSCompressor implements CompressorInterface
 {
-    /** @var YUICompressor */
-    private $yui;
+    private YUICompressor $yui;
 
     public function __construct()
     {
@@ -19,7 +21,7 @@ final class YUIJSCompressor implements CompressorInterface
     {
         try {
             return $this->yui->compress($string);
-        } catch (\Exception $exception) {
+        } catch (Throwable $exception) { /** @phpstan-ignore-line */
             return $string;
         }
     }

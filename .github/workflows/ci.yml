@@ -6,7 +6,7 @@ jobs:
   composer-install:
     strategy:
       matrix:
-        php: [7.4, 8.0-rc]
+        php: [7.4]
         composer: [lowest, current, highest]
     runs-on: ubuntu-latest
     container:
@@ -30,7 +30,7 @@ jobs:
   qa:
     strategy:
       matrix:
-        php: [7.4, 8.0-rc]
+        php: [7.4]
         composer: [lowest, current, highest]
         qa: [lint, cs, stan, psalm, unit-ci, infection, composer-require-checker, composer-unused]
     needs: composer-install

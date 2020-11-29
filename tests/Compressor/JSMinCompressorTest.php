@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\JsCompress\Tests\Compressor;
 
@@ -13,7 +15,7 @@ final class JSMinCompressorTest extends AbstractCompressorTest
 {
     public function testException(): void
     {
-        $input = "var a = '";
+        $input  = "var a = '";
         $output = $this->compressor->compress($input);
         self::assertSame($input, $output);
     }
