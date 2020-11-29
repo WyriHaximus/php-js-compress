@@ -10,7 +10,6 @@ use WyriHaximus\Compress\SmallestResultCompressor;
 use WyriHaximus\JsCompress\Compressor\JavaScriptPackerCompressor;
 use WyriHaximus\JsCompress\Compressor\JShrinkCompressor;
 use WyriHaximus\JsCompress\Compressor\JSMinCompressor;
-use WyriHaximus\JsCompress\Compressor\JSqueezeCompressor;
 use WyriHaximus\JsCompress\Compressor\MMMJSCompressor;
 use WyriHaximus\JsCompress\Compressor\YUIJSCompressor;
 
@@ -30,7 +29,6 @@ final class Factory
     {
         return new SmallestResultCompressor(
             new MMMJSCompressor(),
-            new JSqueezeCompressor(),
             new JSMinCompressor(),
             new JavaScriptPackerCompressor(),
             new JShrinkCompressor(),
