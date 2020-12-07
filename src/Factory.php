@@ -13,6 +13,7 @@ use WyriHaximus\JsCompress\Compressor\JSMinCompressor;
 use WyriHaximus\JsCompress\Compressor\MMMJSCompressor;
 use WyriHaximus\JsCompress\Compressor\YUIJSCompressor;
 
+use const PHP_VERSION_ID;
 use const WyriHaximus\Constants\Boolean\TRUE_;
 
 final class Factory
@@ -31,7 +32,7 @@ final class Factory
             new MMMJSCompressor(),
             new JSMinCompressor(),
             new JavaScriptPackerCompressor(),
-            new JShrinkCompressor(),
+            PHP_VERSION_ID < 80000 ? new JShrinkCompressor() : new ReturnCompressor(),
             $externalCompressors ? new YUIJSCompressor() : new ReturnCompressor(),
             new ReturnCompressor() // Sometimes no compression can already be the smallest
         );
