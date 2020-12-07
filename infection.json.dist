@@ -10,6 +10,8 @@
     },
      "mutators": {
          "@default": true,
+         "LessThan": false,
+         "LessThanNegotiation": false,
          "Ternary": {
              "ignore": [
                  "WyriHaximus\\JsCompress\\Factory::constructSmallest"
