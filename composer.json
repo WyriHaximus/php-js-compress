@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.2 || ^8.0",
         "jalle19/php-yui-compressor": "^1.0",
         "linkorb/jsmin-php": "1.0.0",
         "matthiasmullie/minify": "^1.3",
