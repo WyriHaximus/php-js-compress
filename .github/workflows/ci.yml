@@ -43,7 +43,7 @@ jobs:
         matrix:
           php: ${{ fromJson(needs.generate-versions-strategy.outputs.version) }}
           composer: [lowest, current, highest]
-          qa: [lint, cs, stan, psalm, unit-ci, infection, composer-require-checker, composer-unused]
+          qa: [lint, cs, stan, psalm, unit, infection, composer-require-checker, composer-unused]
       needs:
         - composer-install
         - generate-versions-strategy
