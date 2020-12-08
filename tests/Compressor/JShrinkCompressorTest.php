@@ -6,7 +6,10 @@ namespace WyriHaximus\JsCompress\Tests\Compressor;
 
 use WyriHaximus\Compress\AbstractCompressorTest;
 use WyriHaximus\Compress\CompressorInterface;
+use WyriHaximus\Compress\ReturnCompressor;
 use WyriHaximus\JsCompress\Compressor\JShrinkCompressor;
+
+use const PHP_VERSION_ID;
 
 /**
  * @internal
@@ -22,6 +25,6 @@ final class JShrinkCompressorTest extends AbstractCompressorTest
 
     protected function getCompressor(): CompressorInterface
     {
-        return new JShrinkCompressor();
+        return PHP_VERSION_ID < 80000 ? new JShrinkCompressor() : new ReturnCompressor();
     }
 }
