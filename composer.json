@@ -20,7 +20,7 @@
         "matthiasmullie/minify": "^1.3",
         "meenie/javascript-packer": "1.1",
         "tedivm/jshrink": "^1.3",
-        "wyrihaximus/compress": "^1.1",
+        "wyrihaximus/compress": "^1.2",
         "wyrihaximus/constants": "^1.6"
     },
     "require-dev": {
