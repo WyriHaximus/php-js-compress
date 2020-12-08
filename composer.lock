@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e564a34984f2bf1c7a7efcd140cb9edb",
+    "content-hash": "d00cd4e12c3c83921ee1f673a98fd8a6",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -8318,7 +8318,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "description": " PHPStan rules wrapper",
+            "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
                 "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/1.2.2"
@@ -8404,7 +8404,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "description": "️ Test utilities for api-clients packages",
+            "description": "🛠️ Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-test-utilities/issues",
                 "source": "https://github.com/WyriHaximus/php-test-utilities/tree/3.3.1"
