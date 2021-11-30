@@ -35,28 +35,4 @@ final class FactoryTest extends TestCase
             )
         );
     }
-
-    public function testConstructSmallestNoExternal(): void
-    {
-        $compressor = Factory::constructSmallest();
-
-        self::assertSame(
-            'alert("hoi")',
-            $compressor->compress(
-                'alert("hoi");'
-            )
-        );
-    }
-
-    public function testConstructSmallestExternal(): void
-    {
-        $compressor = Factory::constructSmallest();
-
-        self::assertSame(
-            'alert("hoi")',
-            $compressor->compress(
-                'alert("hoi");'
-            )
-        );
-    }
 }
