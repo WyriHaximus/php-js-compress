@@ -65,7 +65,7 @@ foreach ($sites as $siteName => $siteUrl) {
     echo ' | ';
     echo \str_pad(\round(($compressedLen / $sourceLen) * 100, 3) . '%', 10, ' ', \STR_PAD_LEFT);
     echo ' | ';
-    echo \str_pad(\str_pad(\round($end - $start, 5), 7, ' ') . ' sec', 11, ' ', \STR_PAD_LEFT);
+    echo \str_pad(\str_pad((string)\round($end - $start, 5), 7, ' ') . ' sec', 11, ' ', \STR_PAD_LEFT);
     echo ' |';
     echo \PHP_EOL;
     echo $line;
