@@ -1,7 +1,7 @@
 JsCompress
 ==========
 
-[![Build Status](https://travis-ci.com/WyriHaximus/php-js-compress.png)](https://travis-ci.com/WyriHaximus/php-js-compress)
+[![Continuous Integration](https://github.com/WyriHaximus/php-js-compress/actions/workflows/ci.yml/badge.svg)](https://github.com/WyriHaximus/php-js-compress/actions/workflows/ci.yml)
 [![Latest Stable Version](https://poser.pugx.org/WyriHaximus/js-compress/v/stable.png)](https://packagist.org/packages/WyriHaximus/js-compress)
 [![Total Downloads](https://poser.pugx.org/WyriHaximus/js-compress/downloads.png)](https://packagist.org/packages/WyriHaximus/js-compress)
 [![Coverage Status](https://coveralls.io/repos/WyriHaximus/php-js-compress/badge.png)](https://coveralls.io/r/WyriHaximus/php-js-compress)
@@ -12,12 +12,12 @@ JsCompress
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `~`.
 
 ```
-composer require wyrihaximus/js-compress 
+composer require wyrihaximus/js-compress
 ```
 
 ## License ##
 
-Copyright 2019 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
+Copyright 2025 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

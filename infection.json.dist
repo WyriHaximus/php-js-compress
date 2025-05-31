@@ -1,21 +1,39 @@
 {
-    "timeout": 120,
+    "timeout": 1800,
     "source": {
         "directories": [
             "src"
         ]
     },
     "logs": {
-        "text": "infection-log.txt"
+        "text": "./var/infection.log",
+        "summary": "./var/infection-summary.log",
+        "json": "./var/infection.json",
+        "perMutator": "./var/infection-per-mutator.md",
+        "github": true
     },
-     "mutators": {
-         "@default": true,
-         "LessThan": false,
-         "LessThanNegotiation": false,
-         "Ternary": {
-             "ignore": [
-                 "WyriHaximus\\JsCompress\\Factory::constructSmallest"
-             ]
-         }
-     }
+    "minMsi": 100,
+    "minCoveredMsi": 100,
+    "ignoreMsiWithNoMutations": true,
+    "mutators": {
+        "@default": true,
+        "Concat": {
+            "ignore": [
+                "WyriHaximus\\TileStitcher\\FileLoader::load"
+            ]
+        },
+        "ConcatOperandRemoval": {
+            "ignore": [
+                "WyriHaximus\\TileStitcher\\FileLoader::load"
+            ]
+        },
+        "IfNegation": {
+            "ignore": [
+                "WyriHaximus\\TileStitcher\\FileLoader::load"
+            ]
+        }
+    },
+    "phpUnit": {
+        "configDir": "./etc/qa/"
+    }
 }

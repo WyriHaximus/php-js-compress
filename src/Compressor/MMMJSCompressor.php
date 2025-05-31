@@ -11,7 +11,6 @@ final class MMMJSCompressor implements CompressorInterface
 {
     public function compress(string $string): string
     {
-        /** @psalm-suppress TooManyArguments */
         return (new JS($string))->minify();
     }
 }

@@ -8,9 +8,6 @@ use WyriHaximus\Compress\CompressorInterface;
 use WyriHaximus\Compress\TestUtilities\AbstractCompressorTest;
 use WyriHaximus\JsCompress\Compressor\JavaScriptPackerCompressor;
 
-/**
- * @internal
- */
 final class JavaScriptPackerCompressorTest extends AbstractCompressorTest
 {
     protected function getCompressor(): CompressorInterface
