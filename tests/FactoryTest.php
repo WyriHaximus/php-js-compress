@@ -7,9 +7,6 @@ namespace WyriHaximus\JsCompress\Tests;
 use WyriHaximus\JsCompress\Factory;
 use WyriHaximus\TestUtilities\TestCase;
 
-/**
- * @internal
- */
 final class FactoryTest extends TestCase
 {
     public function testConstruct(): void
@@ -19,8 +16,8 @@ final class FactoryTest extends TestCase
         self::assertSame(
             'alert("hoi")',
             $compressor->compress(
-                'alert("hoi");'
-            )
+                'alert("hoi");',
+            ),
         );
     }
 
@@ -31,8 +28,8 @@ final class FactoryTest extends TestCase
         self::assertSame(
             'alert("hoi")',
             $compressor->compress(
-                'alert("hoi");'
-            )
+                'alert("hoi");',
+            ),
         );
     }
 }
