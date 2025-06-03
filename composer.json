@@ -16,6 +16,7 @@
     "require": {
         "php": "^8.3",
         "matthiasmullie/minify": "^1.3.73",
+        "wikimedia/minify": "^2.9",
         "wyrihaximus/compress": "^2.2",
         "wyrihaximus/compress-contracts": "^1.0"
     },
