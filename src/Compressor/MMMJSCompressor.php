@@ -11,6 +11,6 @@ final class MMMJSCompressor implements CompressorInterface
 {
     public function compress(string $string): string
     {
-        return (new JS($string))->minify();
+        return new JS($string)->minify();
     }
 }

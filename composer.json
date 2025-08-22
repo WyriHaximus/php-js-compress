@@ -1,61 +1,62 @@
 {
-    "name": "wyrihaximus/js-compress",
-    "description": "Compress/minify your JavaScript",
-    "license": "MIT",
-    "keywords": [
-        "html",
-        "compress"
-    ],
-    "authors": [
-        {
-            "name": "Cees-Jan Kiewiet",
-            "email": "ceesjank@gmail.com",
-            "homepage": "http://wyrihaximus.net/"
-        }
-    ],
-    "require": {
-        "php": "^8.3",
-        "matthiasmullie/minify": "^1.3.73",
-        "wikimedia/minify": "^2.9",
-        "wyrihaximus/compress": "^2.2",
-        "wyrihaximus/compress-contracts": "^1.0"
-    },
-    "require-dev": {
-        "wyrihaximus/compress-test-utilities": "^3.1.0",
-        "wyrihaximus/makefiles": "^0.5.0",
-        "wyrihaximus/test-utilities": "^7.4.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "WyriHaximus\\JsCompress\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "WyriHaximus\\JsCompress\\Tests\\": "tests/"
-        }
-    },
-    "config": {
-        "allow-plugins": {
-            "composer/package-versions-deprecated": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "ergebnis/composer-normalize": true,
-            "icanhazstring/composer-unused": true,
-            "infection/extension-installer": true,
-            "phpstan/extension-installer": true,
-            "wyrihaximus/makefiles": true
-        },
-        "platform": {
-            "php": "8.3.13"
-        },
-        "sort-packages": true
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "composer normalize"
-        ],
-        "post-update-cmd": [
-            "composer normalize"
-        ]
+  "name": "wyrihaximus/js-compress",
+  "description": "Compress/minify your JavaScript",
+  "license": "MIT",
+  "keywords": [
+    "html",
+    "compress"
+  ],
+  "authors": [
+    {
+      "name": "Cees-Jan Kiewiet",
+      "email": "ceesjank@gmail.com",
+      "homepage": "http://wyrihaximus.net/"
     }
+  ],
+  "require": {
+    "php": "^8.4",
+    "matthiasmullie/minify": "^1.3.73",
+    "wikimedia/minify": "^2.9",
+    "wyrihaximus/compress": "^2.2",
+    "wyrihaximus/compress-contracts": "^1.0"
+  },
+  "require-dev": {
+    "wyrihaximus/compress-test-utilities": "^3.2.0",
+    "wyrihaximus/makefiles": "^0.6.0",
+    "wyrihaximus/test-utilities": "^8.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "WyriHaximus\\JsCompress\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WyriHaximus\\JsCompress\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true,
+      "icanhazstring/composer-unused": true,
+      "infection/extension-installer": true,
+      "phpstan/extension-installer": true,
+      "wyrihaximus/makefiles": true,
+      "wyrihaximus/test-utilities": true
+    },
+    "platform": {
+      "php": "8.4.13"
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "make on-install-or-update || true"
+    ],
+    "post-update-cmd": [
+      "make on-install-or-update || true"
+    ]
+  }
 }
