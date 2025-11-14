@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace WyriHaximus\JsCompress\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use WyriHaximus\JsCompress\Factory;
 use WyriHaximus\TestUtilities\TestCase;
 
 final class FactoryTest extends TestCase
 {
-    public function testConstruct(): void
+    #[Test]
+    public function construct(): void
     {
         $compressor = Factory::construct();
 
@@ -21,7 +23,8 @@ final class FactoryTest extends TestCase
         );
     }
 
-    public function testConstructSmallestDefault(): void
+    #[Test]
+    public function constructSmallestDefault(): void
     {
         $compressor = Factory::constructSmallest();
 
