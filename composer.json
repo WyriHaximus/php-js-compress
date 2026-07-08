@@ -21,9 +21,8 @@
     "wyrihaximus/compress-contracts": "^1.0"
   },
   "require-dev": {
-    "wyrihaximus/compress-test-utilities": "^3.2.0",
-    "wyrihaximus/makefiles": "^0.7.15",
-    "wyrihaximus/test-utilities": "^8.6.0"
+    "wyrihaximus/compress-test-utilities": "^4.0.0",
+    "wyrihaximus/makefiles": "^0.7.15"
   },
   "autoload": {
     "psr-4": {
