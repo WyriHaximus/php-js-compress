@@ -10,6 +10,7 @@ use WyriHaximus\Compress\SmallestResultCompressor;
 use WyriHaximus\JsCompress\Compressor\MMMJSCompressor;
 use WyriHaximus\JsCompress\Compressor\WikiMediaMinifyCompressor;
 
+/** @api */
 final class Factory
 {
     public static function construct(): CompressorInterface
