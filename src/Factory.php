@@ -7,6 +7,7 @@ namespace WyriHaximus\JsCompress;
 use WyriHaximus\Compress\CompressorInterface;
 use WyriHaximus\Compress\ReturnCompressor;
 use WyriHaximus\Compress\SmallestResultCompressor;
+use WyriHaximus\JsCompress\Compressor\JShrinkCompressor;
 use WyriHaximus\JsCompress\Compressor\MMMJSCompressor;
 use WyriHaximus\JsCompress\Compressor\WikiMediaMinifyCompressor;
 
@@ -23,6 +24,7 @@ final class Factory
         return new SmallestResultCompressor(
             new MMMJSCompressor(),
             new WikiMediaMinifyCompressor(),
+            new JShrinkCompressor(),
             new ReturnCompressor(), // Sometimes no compression can already be the smallest
         );
     }
