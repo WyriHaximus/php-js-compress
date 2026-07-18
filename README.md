@@ -1,7 +1,7 @@
 JsCompress
 ==========
 
-[![Continuous Integration](https://github.com/WyriHaximus/php-js-compress/actions/workflows/ci.yml/badge.svg)](https://github.com/WyriHaximus/php-js-compress/actions/workflows/ci.yml)
+[![Continuous Integration](https://github.com/WyriHaximus/php-js-compress/actions/workflows/ci.yaml/badge.svg)](https://github.com/WyriHaximus/php-js-compress/actions/workflows/ci.yaml)
 [![Latest Stable Version](https://poser.pugx.org/WyriHaximus/js-compress/v/stable.png)](https://packagist.org/packages/WyriHaximus/js-compress)
 [![Total Downloads](https://poser.pugx.org/WyriHaximus/js-compress/downloads.png)](https://packagist.org/packages/WyriHaximus/js-compress)
 [![Coverage Status](https://coveralls.io/repos/WyriHaximus/php-js-compress/badge.png)](https://coveralls.io/r/WyriHaximus/php-js-compress)
